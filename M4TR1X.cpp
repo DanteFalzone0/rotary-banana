@@ -30,6 +30,7 @@ char static_block() {
 
 
 int main(void) {
+    initialize();
     while (1 == 1) {
         for (int x = 0; x < 40; x ++) {
             for (int y = 0; y < 20; y++) {
@@ -40,3 +41,4 @@ int main(void) {
     }
     return 0;
 }
+
