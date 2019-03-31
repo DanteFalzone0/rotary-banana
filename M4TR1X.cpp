@@ -1,3 +1,7 @@
+/* M4TR1X.cpp - a program that shows a random field of ones and zeroes,
+   so that you look like an 31337 H4><0R with flashing binary in your
+   terminal. Optional: displaying as green text against a black background. */
+
 #include <random>
 #include "banana.hpp"
 
