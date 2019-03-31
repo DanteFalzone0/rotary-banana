@@ -1,6 +1,8 @@
-  GNU nano 3.2                                                                  docs.txt                                                                            
-
 *** Functions in the header file "banana.hpp" . ***
+
+initialize() : fill the frame with spaces. To properly display the frame, it is advised
+               that you should call this function at the beginning of your main() function.
+               This can also be a convenient way to erase the frame when making animations.
 
 fresh_frame() : display the frame afresh. When called, this function
                 will erase the previous frame and replace it.
