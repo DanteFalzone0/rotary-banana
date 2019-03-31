@@ -4,8 +4,9 @@ initialize() : fill the frame with spaces. To properly display the frame, it is 
                that you should call this function at the beginning of your main() function.
                This can also be a convenient way to erase the frame when making animations.
 
-fresh_frame() : display the frame afresh. When called, this function
-                will erase the previous frame and replace it.
+fresh_frame() : display the frame afresh. When called, this function will update the frame
+                to display whatever was last put in the 2d array that contains the frame's
+                contents.
 
 advance_frame(int milliseconds) : does the same as fresh_frame(), but waits for
                                   a given number of milliseconds immediately afterwards.
