@@ -3,19 +3,19 @@
 fresh_frame() : display the frame afresh. When called, this function
                 will erase the previous frame and replace it.
 
-advance_frame(int milliseconds) : does the same as fresh_frame(), but waits for
-                                  a given number of milliseconds immediately afterwards.
-                                  For example, `advance_frame(42);` will refresh the
-                                  frame and wait about 1/24th of a second before
-                                  continuing the program. You could put this in a
-                                  while loop to make a continuously refreshing frame.
+advance_frame(milliseconds) : does the same as fresh_frame(), but waits for
+                              a given number of milliseconds immediately afterwards.
+                              For example, `advance_frame(42);` will refresh the
+                              frame and wait about 1/24th of a second before
+                              continuing the program. You could put this in a
+                              while loop to make a continuously refreshing frame.
 
 
-blit(char, int x, int y) : changes one of the cells of the frame. The frame has twenty
-                           rows and forty columns. Calling this function will replace
-                           the cell whose coordinates it is given with its first
-                           argument. For example, `blit('X', 3, 17);` will put the
-                           character 'X' in the third cell on the seventeenth line.
-                           Note that merely calling blit() will not on its own result
-                           in a visible change in the frame's contents; you must thereafter
-                           refresh the frame to see the character.
+blit(character, x_coordinate, y_coordinate) : changes one of the cells of the frame. The frame has twenty
+                                              rows and forty columns. Calling this function will replace
+                                              the cell whose coordinates it is given with its first
+                                              argument. For example, `blit('X', 3, 17);` will put the
+                                              character 'X' in the third cell on the seventeenth line.
+                                              Note that merely calling blit() will not on its own result
+                                              in a visible change in the frame's contents; you must thereafter
+                                              refresh the frame to see the character.
