@@ -1,6 +1,7 @@
 #include "banana.hpp"
 
 int main(void) {
+    initialize();
     int x = 18;
     int y = 2;
     while (1 > 0) {
