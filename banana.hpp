@@ -63,6 +63,8 @@ char frame_contents[20][40] = {
 // Function to refresh the frame.
 void fresh_frame(void) {
     // Go back up the terminal display to print out the frame.
+    /* TODO: not all consoles support this escape sequence; use
+       different ones to port this header to other platforms? */
     for (int b = 0; b < 22; b++) {
         cout << "\x1b[A";
     }
