@@ -1,6 +1,7 @@
 #include "banana.hpp"
 
 int main(void) {
+    initialize();
     for (int i = 0; i < 20; i++) {
         blit('X', (i * 2), i);
         if (i != 0) {
