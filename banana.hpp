@@ -1,5 +1,5 @@
 /*
-    banana.hpp - a C++ library written by Dante Falzone for displaying
+    banana.hpp - a C++ header file written by Dante Falzone for displaying
     animated ascii art in the terminal. Inspired by javidx9's olcConsoleGameEngine.
 
     Copyright (C) 2019  Dante James Falzone
