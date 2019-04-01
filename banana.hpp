@@ -1,6 +1,7 @@
 /*
     banana.hpp - a C++ library written by Dante Falzone for displaying
-    animated ascii art in the terminal. Inspired by javidx9's olcConsoleGameEngine.
+    animated ascii art in the terminal. Inspired by javidx9's
+    olcConsoleGameEngine.
 
     Copyright (C) 2019  Dante James Falzone
 
@@ -27,6 +28,7 @@
 */
 
 #include <iostream>
+#include <stdio.h>
 #include <chrono>
 #include <thread>
 #include <cstring>
@@ -156,4 +158,23 @@ void line(int x0, int y0, int x1, int y1, char glyph) {
             high_line(x0, y0, x1, y1, glyph);
         }
     }
+}
+
+
+// Function to get realtime keypresses. Works on Unix-based systems only.
+char getkey(void) {
+    // Prepare the terminal to capture characters one by one
+    system("stty raw");
+
+    // Get a character without having to put a newline
+    char input = getchar();
+
+    // Set the terminal back to how it was
+    system("stty cooked");
+
+    return input;
+    /* Credit where credit is due: many thanks
+       to StackOverflow user cwhiii
+       https://stackoverflow.com/a/912184/10942736
+    */
 }
