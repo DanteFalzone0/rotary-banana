@@ -50,7 +50,7 @@ int main(void) {
             down_momentum += 0.5;
         }
 
-        // Display my name.
+        // Display my name. See lines 6-8.
         for (int i = 0; i < strlen(banner); i++) {
             if ((banner_x + i) < 40) {
                 blit(banner[i], (banner_x + i), 1);
