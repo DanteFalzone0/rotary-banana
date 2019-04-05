@@ -38,3 +38,8 @@ line(int x0, int y0, int x1, int y1, char) : draw a line from (x0, y0) to (x1, y
                                              that, as with blit(), you must refresh
                                              the frame to see the line.
 
+draw_circle(int x, int y, int radius, char) : draw a circle, rendered in char, centered at
+                                              the point (x, y), with radius.
+                                              
+draw_filled_circle(int x, int y, int radius, char) : does the same as draw_circle, but the
+                                                     circle is filled.
