@@ -178,3 +178,35 @@ char getkey(void) {
        https://stackoverflow.com/a/912184/10942736
     */
 }
+
+// Tell whether or not two points are (approximately) a given distance apart.
+bool is_distance(float x0, float y0, float x1, float y1, float distance) {
+    float base   = abs(x1 - x0);
+    float height = abs(y1 - y0);
+    float exact_dist = sqrt((base * base) + (height * height));
+    int approx_actual = exact_dist; // round to nearest int
+    int approx_expected = distance; // round this one too
+    if (approx_actual == approx_expected) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Function to draw a circle.
+void draw_circle(int center_x, int center_y, int radius, char glyph) {
+    for (int x = 0; x < 40; x++) {
+        for (int y = 0; y < 20; y++) {
+            if (is_distance((center_x / 2), center_y, (x / 2), y, radius)) {
+                blit(glyph, x, y);
+            }
+        }
+    }
+}
+
+// Function to draw a filled circle.
+void draw_filled_circle(int center_x, int center_y, int radius, char glyph) {
+    for (int i = 0; i <= radius; i++) {
+        draw_circle(center_x, center_y, i, glyph);
+    }
+}
