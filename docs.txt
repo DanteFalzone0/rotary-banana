@@ -43,3 +43,9 @@ draw_circle(int x, int y, int radius, char) : draw a circle, rendered in char, c
                                               
 draw_filled_circle(int x, int y, int radius, char) : does the same as draw_circle, but the
                                                      circle is filled.
+
+is_occupied(int x, int y) : returns boolean `true` if the coordinates (x, y) do not contain a
+                            space. Returns boolean `false` if they do.
+
+contains(char, int x, int y) : returns `true` is coordinates (x, y) contain char. Otherwise
+                               returns false.
