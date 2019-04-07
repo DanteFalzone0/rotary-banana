@@ -15,7 +15,7 @@ int main() {
     blit('o', 20, 12);
     blit('o', 22, 12);
     while (1 == 1) {
-        advance_frame(5);
+        advance_frame(80);
         for (int x = 0; x < 40; x++) {
             for (int y = 0; y < 20; y++) {
                 // Spawn cell if north and east are occupied
@@ -82,7 +82,6 @@ int main() {
                 }
             }
         }
-//        advance_frame(90);
     }
     return 0;
 }
