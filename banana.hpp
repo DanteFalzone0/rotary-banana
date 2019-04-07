@@ -210,3 +210,21 @@ void draw_filled_circle(int center_x, int center_y, int radius, char glyph) {
         draw_circle(center_x, center_y, i, glyph);
     }
 }
+
+// Function to tell if a space is occupied.
+bool is_occupied(int x, int y) {
+    if (frame_contents[y][x] != ' ') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Function to tell if a specific character is in a given space.
+bool contains(char glyph, int x, int y) {
+    if (frame_contents[y][x] == glyph) {
+        return true;
+    } else {
+        return false;
+    }
+}
