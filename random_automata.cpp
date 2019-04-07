@@ -97,16 +97,16 @@ int main() {
      *    |o o|          |o o|                                               *
      *    +---+          +---+                                               *
      *                                                                       *
-     * 4. If a cell has six neighbors, there is a 1/25 chance that it will   *
+     * 4. If a cell has six neighbors, there is a 14/15 chance that it will  *
      *    die.                                                               *
      *                                                                       *
      *    Like so:                                                           *
      *                                                                       *
-     *    +-----+                 +-----+                                    *
-     *    | o o |                 | o o |                                    *
-     *    |o o o|   --{1/25}-->   |o   o|                                    *
-     *    | o o |                 | o o |                                    *
-     *    +-----+                 +-----+                                    *
+     *    +-----+                  +-----+                                   *
+     *    | o o |                  | o o |                                   *
+     *    |o o o|   --{14/15}-->   |o   o|                                   *
+     *    | o o |                  | o o |                                   *
+     *    +-----+                  +-----+                                   *
      *                                                                       *
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
