@@ -1,4 +1,6 @@
-*** Functions in the header file "banana.hpp" . ***
+*** Stuff in the header file "banana.hpp" . ***
+
+Note: all this content is in the namespace `banana`.
 
 initialize() : fill the frame with spaces. To properly display the frame, it is advised
                that you should call this function at the beginning of your main() function.

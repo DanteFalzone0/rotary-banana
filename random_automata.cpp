@@ -2,6 +2,8 @@
 #include "banana.hpp"
 #include <random>
 
+using namespace std;
+using namespace banana;
 
 int randomize() {
     random_device rd;

@@ -1,5 +1,7 @@
 #include "banana.hpp"
 
+using namespace banana;
+
 int main(void) {
     // Coordinates of the thing moved with the keys. Starts at (2, 2).
     int x = 2;
