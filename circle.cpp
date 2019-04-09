@@ -3,6 +3,8 @@
 
 #include "banana.hpp"
 
+using namespace banana;
+
 int main(void) {
     initialize();
 
