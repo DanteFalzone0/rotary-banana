@@ -5,6 +5,8 @@
 #include <random>
 #include "banana.hpp"
 
+using namespace std;
+using namespace banana;
 
 int randomize() {
     random_device rd;
