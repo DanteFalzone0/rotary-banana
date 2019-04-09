@@ -1,6 +1,9 @@
 #include "banana.hpp"
 #include <random>
 
+using namespace std;
+using namespace banana;
+
 int randomize(int upper_bound) {
     random_device rd;
     uniform_int_distribution<int> dist(0, upper_bound);
