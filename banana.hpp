@@ -1,7 +1,7 @@
 /*
     banana.hpp - a C++ header file written by Dante Falzone for
     displaying animated ascii art in the terminal. Inspired by
-    javidx9's olcConsoleGameEngine. This is version 19.04.11.0.
+    javidx9's olcConsoleGameEngine. This is version 19.04.11.1.
 
     Copyright (C) 2019  Dante James Falzone
 
@@ -210,9 +210,9 @@ namespace banana {
 
     // Tell whether or not two points are (approximately) a given distance apart.
     bool is_distance(float x0, float y0, float x1, float y1, float distance) {
-        float base   = abs(x1 - x0);
-        float height = abs(y1 - y0);
-        float exact_dist = sqrt((base * base) + (height * height));
+        float base   = std::abs(x1 - x0);
+        float height = std::abs(y1 - y0);
+        float exact_dist = std::sqrt((base * base) + (height * height));
         int approx_actual = exact_dist; // round to nearest int
         int approx_expected = distance; // round this one too
         if (approx_actual == approx_expected) {
