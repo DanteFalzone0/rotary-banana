@@ -6,7 +6,6 @@
 using namespace std;
 using namespace banana;
 
-
 int pick_one_to_kill() {
     random_device rd;
     uniform_int_distribution<int> dist(0, 7);
@@ -37,11 +36,18 @@ int main() {
 
     while (1 == 1) {
         for (int i = 0; i < 800; i++) {
+            // The rules are applied to cells in a pseudorandom order,
+            // because real bacteria don't work according to a perfect
+            // metronome orchestrating their actions.
             int x = random_x();
             int y = random_y();
+
+            // Each dead bacterium disappears within 1-2 generations.
             if (contains('x', x, y)) {
                  blit(' ', x, y);
             }
+
+            // Living bacteria will die of overcrowding.
             if (contains('o', x, y)) {
                 if (is_occupied(x-1, y)
                  && is_occupied(x+1, y)
@@ -61,6 +67,10 @@ int main() {
                     blit('x', x+1, y-1);
                     blit('x', x-1, y+1);
                     blit('x', x+1, y+1);
+
+                // Living bacteria that are not killed or overcrowded
+                // will try to replicate themselves into the nearest
+                // available space.
                 } else if (not is_occupied(x, y+1)) {
                     blit('o', x, y+1);
                 } else if (not is_occupied(x+1, y)) {
@@ -77,6 +87,10 @@ int main() {
                     blit('o', x+1, y-1);
                 } else if (not is_occupied(x-1, y+1)) {
                     blit('o', x-1, y+1);
+
+                // If there is no available space into which a
+                // bacterium can reproduce, it will kill one of the
+                // bacteria around it.
                 } else {
                     int decision = pick_one_to_kill();
                     switch (decision) {
@@ -108,7 +122,9 @@ int main() {
                 }
             }
         }
-        advance_frame(150);
+        // There are ten generations per second in this simulation. In
+        // reality a bacterial generation takes about twenty minutes.
+        advance_frame(100);
         generation++;
         printf("    Generation: %d (press Ctrl+Z to stop)\n", generation);
         printf("    o = live bacterium; x = dead bacterium\n\n\n");
