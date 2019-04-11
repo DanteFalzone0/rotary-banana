@@ -31,7 +31,7 @@ int main() {
 
         // Create a big bubble in the middle of the particles
         if (bigger_cycle == 1024) {
-            draw_filled_circle(20, 12, 4.5, ' ');
+            draw_filled_circle(20, 12, 4, ' ');
             bigger_cycle = 0;
         }
 
