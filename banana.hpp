@@ -104,6 +104,16 @@ namespace banana {
 
     // Function to update a frame cell.
     void blit(char glyph, int x, int y) {
+        if (0 > x) {
+            x = 0;
+        } else if (39 < x) {
+            x = 39;
+        }
+        if (0 > y) {
+            y = 0;
+        } else if (19 < y) {
+            y = 19;
+        }
         frame_contents[y][x] = glyph;
     }
 
