@@ -1,3 +1,4 @@
+// See the videos `conway_pt_0.mp4` through `conway_pt_4.mp4` to see me writing this.
 #include "banana.hpp"
 #include <random>
 
