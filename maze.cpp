@@ -129,7 +129,7 @@ int main() {
         fresh_frame();
         printf("    WASD to move; Q to quit\n");
         char keypress = getkey();
-        printf("\x1b[A");
+        printf("\b \b\x1b[A");
         switch (keypress) {
             case 'w':
                 if (not is_occupied(x_pos, y_pos-1)) {
