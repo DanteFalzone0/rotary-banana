@@ -42,7 +42,7 @@ int main() {
     }
 
     while (1 == 1) {
-        for (int i = 0; i < 800; i++) {
+        for (int i = 0; i < 50; i++) {
             int x = random_number(39);
             int y = random_number(19);
 
@@ -105,7 +105,7 @@ int main() {
             generations++;
         }
 
-        advance_frame(84);
+        advance_frame(30);
         printf("    Generations: %d (press Ctrl+Z to stop)\n", generations);
         printf("\x1b[A");
     }
