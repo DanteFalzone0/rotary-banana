@@ -135,24 +135,32 @@ int main() {
                 if (not is_occupied(x_pos, y_pos-1)) {
                     blit(' ', x_pos, y_pos);
                     y_pos--;
+                } else {
+                    printf("\a");
                 }
                 break;
             case 's':
                 if (not is_occupied(x_pos, y_pos+1)) {
                     blit(' ', x_pos, y_pos);
                     y_pos++;
+                } else {
+                    printf("\a");
                 }
                 break;
             case 'a':
                 if (not is_occupied(x_pos-1, y_pos)) {
                     blit(' ', x_pos, y_pos);
                     x_pos--;
+                } else {
+                    printf("\a");
                 }
                 break;
             case 'd':
                 if (not is_occupied(x_pos+1, y_pos)) {
                     blit(' ', x_pos, y_pos);
                     x_pos++;
+                } else {
+                    printf("\a");
                 }
                 break;
             case 'q':
