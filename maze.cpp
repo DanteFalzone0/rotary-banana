@@ -1,5 +1,6 @@
 #include "banana.hpp"
 #include <random>
+#include <stdio.h>
 
 using namespace banana;
 using namespace std;
@@ -120,6 +121,43 @@ int main() {
             }
         }
     }
-    fresh_frame();
+
+    int x_pos = 1;
+    int y_pos = 1;
+    while (1 == 1) {
+        blit('@', x_pos, y_pos);
+        fresh_frame();
+        printf("    WASD to move; Q to quit\n");
+        char keypress = getkey();
+        printf("\x1b[A");
+        switch (keypress) {
+            case 'w':
+                if (not is_occupied(x_pos, y_pos-1)) {
+                    blit(' ', x_pos, y_pos);
+                    y_pos--;
+                }
+                break;
+            case 's':
+                if (not is_occupied(x_pos, y_pos+1)) {
+                    blit(' ', x_pos, y_pos);
+                    y_pos++;
+                }
+                break;
+            case 'a':
+                if (not is_occupied(x_pos-1, y_pos)) {
+                    blit(' ', x_pos, y_pos);
+                    x_pos--;
+                }
+                break;
+            case 'd':
+                if (not is_occupied(x_pos+1, y_pos)) {
+                    blit(' ', x_pos, y_pos);
+                    x_pos++;
+                }
+                break;
+            case 'q':
+                exit(0);
+        }
+    }
     return 0;
 }
