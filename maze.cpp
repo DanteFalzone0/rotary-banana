@@ -72,6 +72,16 @@ int main() {
     // Clean up closed boxes
     for (int x = 0; x < 40; x += 3) {
         for (int y = 0; y < 20; y += 3) {
+            // TODO: currently this program only catches closed boxes if
+            // they aren't missing any corners. For example, boxes like
+            // the following:
+            /*
+                 ###
+                #  #
+                #  #
+                ####
+            */
+            // get missed entirely.
             if (contains('#', x, y)
              && contains('#', x+1, y)
              && contains('#', x+2, y)
