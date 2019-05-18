@@ -106,7 +106,7 @@ int main() {
         }
 
         advance_frame(30);
-        printf("    Generations: %d (press Ctrl+Z to stop)\n", generations);
+        printf("    Generations: %d (press Ctrl+C to stop)\n", generations);
         printf("\x1b[A");
     }
     return 0;
